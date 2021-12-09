@@ -1,0 +1,10 @@
+# Carpetas
+docs/
+node_modules/
+temp/
+tmp/
+
+# Archivos
+*.png
+*.txt
+.log*
