@@ -30,6 +30,46 @@
                 <li><strong>rm -rf .git</strong> elimina el repositorio de git de manera forzada</li>
             </ul>
         </article>
+        <article>
+            <h3>Staging Area (INDEX)</h3>
+            <p>
+                El area de control de cambios corresponde a un archivo que registra a cuales dentro del proyecto le estamos haciendo seguimiento. Cada vez que agregamos un archivo al INDEX se realiza una captura del codigo(SNAPSHOT) donde se registran los cambios realizados; gracias a esto podemos reestablecer algunos cambios, deshacer la captura e incluso confirmarla para que forme parte del historial de cambios.
+            </p>
+            <ul class="commands">
+                <li><strong>git status</strong> muestra el estado de los archivos con respecto  al INDEX, algunos de los valores posibles son:
+                    <li><strong>untracked</strong> el archivo aun no fue agregado al INDEX y por lo tanto es irrecuperable en caso de perdida.</li>
+                    <li><strong>staged</strong> se realizo la captura de los cambios del archivo y los mismos pueden ser reestablecidos.</li>
+                    <li><strong>commited</strong> los cambios del archivo fueron almacenados exitosamente en el historial de cambios.</li>
+                    <li><strong>modified</strong> el archivo difiere con respecto a la ultima captura realizada.</li>
+                </li>
+                <li><strong>git diff</strong> muestra las diferencias entre el Working Directory y los cambios almacenados en el INDEX</li>
+                <li><strong>git restore --staged &lt;file></strong> quita la ultima captura realizada del archivo del INDEX</li>
+                <li><strong>git rm --cached &lt;file></strong> elimina el arhivo del area de control, o sea que lo remueve del INDEX.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Repository (LOCAL/Remote)</h3>
+            <p>
+                El repositorio corresponde a la carpeta donde se almacenan todas las confirmaciones de cambios realizadas en el proyecto, las mismas se almacenan en formato BLOB (Binary Large Object File) organizados en una estructura de carpetas con numeracion hexadecimal que van del 00 a ff. Estos cambios sirven para llevar un control en el proyecto e incluso reestablecerlo en caso de ser necesario.
+            </p>
+            <ul class="commands">
+                <li><strong>git commit</strong> abre el editor predeterminado para realizar la confirmacion de cambios</li>
+                <li><strong>git log</strong> muestra de form descendente el historial de cambios realizados</li>
+                <li><strong>git blame &lt;file></strong> muestra las lineas de codigo del archivo identificando al autor de cada una.</li>
+                <li><strong>git checkout &lt;ref></strong> permite desplazarnos dentro del historial de cambios, moviendonos entre los commits</li>
+                <li><strong>git fetch &lt;remote></strong> descarga el historial de cambios del repositorio remoto</li>
+                <li><strong>git push &lt;remote> &lt;branch></strong> envia al repositorio remoto los cambios de la rama seleccionada</li>
+            </ul>
+        </article>
+    </section>
+    <section>
+        <h2>Apuntadores de GIT</h2>
+        <article>
+            <h3>HEAD</h3>
+            <p>
+                Apuntador Movil que se utiliza para identificar donde nos encontramos dentro del proyecto actual, tambien se utiliza como referencia para otros comandos de la siguiente manera <em>HEAD^^</em> o <em>HEAD~2</em> para indicar cuantos ancestros o commits anteriores deben tomarse en cuenta.
+            </p>
+        </article>
     </section>
     <footer>
         <div class="social">
