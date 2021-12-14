@@ -47,6 +47,20 @@
                 <li><strong>git rm --cached &lt;file></strong> elimina el arhivo del area de control, o sea que lo remueve del INDEX.</li>
             </ul>
         </article>
+        <article>
+            <h3>Repository (LOCAL/Remote)</h3>
+            <p>
+                El repositorio corresponde a la carpeta donde se almacenan todas las confirmaciones de cambios realizadas en el proyecto, las mismas se almacenan en formato BLOB (Binary Large Object File) organizados en una estructura de carpetas con numeracion hexadecimal que van del 00 a ff. Estos cambios sirven para llevar un control en el proyecto e incluso reestablecerlo en caso de ser necesario.
+            </p>
+            <ul class="commands">
+                <li><strong>git commit</strong> abre el editor predeterminado para realizar la confirmacion de cambios</li>
+                <li><strong>git log</strong> muestra de form descendente el historial de cambios realizados</li>
+                <li><strong>git blame &lt;file></strong> muestra las lineas de codigo del archivo identificando al autor de cada una.</li>
+                <li><strong>git checkout &lt;ref></strong> permite desplazarnos dentro del historial de cambios, moviendonos entre los commits</li>
+                <li><strong>git fetch &lt;remote></strong> descarga el historial de cambios del repositorio remoto</li>
+                <li><strong>git push &lt;remote> &lt;branch></strong> envia al repositorio remoto los cambios de la rama seleccionada</li>
+            </ul>
+        </article>
     </section>
     <footer>
         <div class="social">
