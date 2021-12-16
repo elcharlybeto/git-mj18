@@ -5,14 +5,9 @@
     const mapBtn = d.querySelector('#mapa .btn')
     const mapFrm = d.querySelector('#mapa iframe')
 
-// Navegacion
-    menuBtn.onclick = openMenu()
+    // Navegacion
+    menuBtn.onclick = () => menuLst.classList.toggle('active') ? menuBtn.innerHTML = '&times;' : menuBtn.innerHTML = '&equiv;'
 
-    function openMenu(){
-        menuLst.classList.toggle('active') ? 
-            menuBtn.innerHTML = '&times;' : 
-            menuBtn.innerHTML = '&equiv;'
-    }
 // Mapa de Contacto
     mapBtn.addEventListener('click', openMap )
 
