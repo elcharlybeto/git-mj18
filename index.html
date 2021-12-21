@@ -94,6 +94,12 @@
                 Apuntador Estatico que se corresponde con el commit donde se haya aplicado, principalmente se utilizan para el versionado del proyecto. Las etiquetas se suelen aplicar con el siguiente formato <em>v0.0.  </em> donde el primer numero corresponde a la version principal, el segundo al numero de compilacion o caracteristicas implementada y el tercero a la correcion de errores. Tambien facilita la navegacion dentro del historial de cambios.
             </p>
         </article>
+        <article>
+            <h3>STASH</h3>
+            <p>
+                Apuntador que hace referencia la zona temporal de cambios, que solamente se almacenan en el repositorio local. Corresponde a un commit que apunta al ancestro donde se realizo y al INDEX de la rama en cuestion. Al reaplicar los cambios se realiza una operacion merge a la inversa quitando del INDEX las lineas y manteniendolas en el Working Directory.
+            </p>
+        </article>
     </section>
     <footer>
         <div class="social">
