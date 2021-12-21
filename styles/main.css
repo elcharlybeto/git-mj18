@@ -70,7 +70,17 @@
             max-height: 640px;
         }
     /* Cabecera */
-
+        header{
+            display: grid;
+            align-content: center;
+            min-height: min(100vh,640px);
+            padding: 1rem;
+            text-align: center;
+            color:#eee;
+            background-color: #333;
+            text-shadow: 0 0 min(2vw, 3rem);
+            font-size: min(calc(2vw + .8rem), 3rem);
+        }
     /* Contenido */
 
     /* Pie de Pagina */
