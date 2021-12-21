@@ -78,6 +78,15 @@
     /* Pie de Pagina */
 
         /* Mapa de Contacto */
+.title-map{
+    font-size: 2rem;
+    font-weight: 800;
+}
+#mapa{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+}
 
         /* Tabla Colaboradores */
 
