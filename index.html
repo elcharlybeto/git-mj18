@@ -155,6 +155,18 @@
                 <li><strong>git cherry-pick &lt;ref></strong> comando que permite obtener los cambios de un commit y aplicarlos en la rama actual</li>
             </ul>
         </article>
+        <article>
+            <h3>BISECT</h3>
+            <p>
+                Herramienta que facilita la busqueda commit para identificar en cual se introdujo un error que afecta al proyecto. Funciona de manera binaria, simplemente indicandole cual es el commit que arrastra el problema (generalmente el ultimo) y luego desplazarnos a una version funcional del proyecto e identificarla como funcional, a partir de ahi git movera la cabecera para solicitarnos identificar si dichos commits son funcionales o no.
+            </p>
+            <ul class="commands">
+                <li><strong>git bisect start</strong> inicia el analisis binario de commits</li>
+                <li><strong>git bisect bad</strong> indica que el commit actual contiene el problema</li>
+                <li><strong>git bisect good</strong> indica que el commit actual es completamente funcional</li>
+                <li><strong>git bisect reset</strong> finaliza con el analisis de confirmaciones</li>
+            </ul>
+        </article>
     </section>
     <footer>
         <!-- Mapa de Contacto -->
