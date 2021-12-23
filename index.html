@@ -143,6 +143,18 @@
                 <li><strong>git reset &lt;ref> -- &lt;file> </strong> reestablece el archivo seleccionado a como se encontraba en dicha confirmacion</li>
             </ul>
         </article>
+        <article>
+            <h3>REVERT</h3>
+            <p>
+                Herramienta que permite emitir un commit que deshaga los cambios introducido spor otra confirmacion, y a diferencia de RESET, es ideal para situaciones donde los cambios se encuentran subidos al repositorio remoto, ya que si reestablecemos, en estos casos, git nos obligara a descargar los cambios debido a la diferencia de commit.
+            </p>
+            <ul class="commands">
+                <li><strong>git revert &lt;ref></strong> genera un commit con las operaciones contrarias a las del commit seleccionado</li>
+                <li><strong>git revert --abort</strong> anula la operacion de reversion de cambios, en caso de conflicto</li>
+                <li><strong>git revert --continue</strong> una vez resuelto el conflicto y realizada la captura, procede con la reversion</li>
+                <li><strong>git cherry-pick &lt;ref></strong> comando que permite obtener los cambios de un commit y aplicarlos en la rama actual</li>
+            </ul>
+        </article>
     </section>
     <footer>
         <!-- Mapa de Contacto -->
