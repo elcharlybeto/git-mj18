@@ -129,7 +129,21 @@
             </ul>
         </article>
     </section>
-    <!-- Seccion Control de Cambios -->
+    <section>
+        <h2>Control de Cambios</h2>
+        <article>
+            <h3>RESET</h3>
+            <p>
+                Herramienta que elimina commits del historial de confirmaciones de manera descendente, es decir, desde el ultimo hasta aquel que hayamos utilizado como referencia. Se utiliza para reorganizar las confirmaciones de cambios, o simplemente reestablecer el proyecto cuando llegamos a un punto de no retorno.
+            </p>
+            <ul class="commands">
+                <li><strong>git reset &lt;ref> </strong> elimina los commits del repositorio, pero mantiene intactos el INDEX y el Working Directory</li>
+                <li><strong>git reset --mixed &lt;ref> </strong> elimina los commits del repositorio y reestablece el INDEX posterior a dicha confirmacion</li>
+                <li><strong>git reset --hard &lt;ref> </strong> reestablece por completo el proyecto a como se enontraba en dicha confirmacion</li>
+                <li><strong>git reset &lt;ref> -- &lt;file> </strong> reestablece el archivo seleccionado a como se encontraba en dicha confirmacion</li>
+            </ul>
+        </article>
+    </section>
     <footer>
         <!-- Mapa de Contacto -->
         <div class="title-map">Mapa de Contacto</div>
