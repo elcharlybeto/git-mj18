@@ -129,7 +129,45 @@
             </ul>
         </article>
     </section>
-    <!-- Seccion Control de Cambios -->
+    <section>
+        <h2>Control de Cambios</h2>
+        <article>
+            <h3>RESET</h3>
+            <p>
+                Herramienta que elimina commits del historial de confirmaciones de manera descendente, es decir, desde el ultimo hasta aquel que hayamos utilizado como referencia. Se utiliza para reorganizar las confirmaciones de cambios, o simplemente reestablecer el proyecto cuando llegamos a un punto de no retorno.
+            </p>
+            <ul class="commands">
+                <li><strong>git reset &lt;ref> </strong> elimina los commits del repositorio, pero mantiene intactos el INDEX y el Working Directory</li>
+                <li><strong>git reset --mixed &lt;ref> </strong> elimina los commits del repositorio y reestablece el INDEX posterior a dicha confirmacion</li>
+                <li><strong>git reset --hard &lt;ref> </strong> reestablece por completo el proyecto a como se enontraba en dicha confirmacion</li>
+                <li><strong>git reset &lt;ref> -- &lt;file> </strong> reestablece el archivo seleccionado a como se encontraba en dicha confirmacion</li>
+            </ul>
+        </article>
+        <article>
+            <h3>REVERT</h3>
+            <p>
+                Herramienta que permite emitir un commit que deshaga los cambios introducido spor otra confirmacion, y a diferencia de RESET, es ideal para situaciones donde los cambios se encuentran subidos al repositorio remoto, ya que si reestablecemos, en estos casos, git nos obligara a descargar los cambios debido a la diferencia de commit.
+            </p>
+            <ul class="commands">
+                <li><strong>git revert &lt;ref></strong> genera un commit con las operaciones contrarias a las del commit seleccionado</li>
+                <li><strong>git revert --abort</strong> anula la operacion de reversion de cambios, en caso de conflicto</li>
+                <li><strong>git revert --continue</strong> una vez resuelto el conflicto y realizada la captura, procede con la reversion</li>
+                <li><strong>git cherry-pick &lt;ref></strong> comando que permite obtener los cambios de un commit y aplicarlos en la rama actual</li>
+            </ul>
+        </article>
+        <article>
+            <h3>BISECT</h3>
+            <p>
+                Herramienta que facilita la busqueda commit para identificar en cual se introdujo un error que afecta al proyecto. Funciona de manera binaria, simplemente indicandole cual es el commit que arrastra el problema (generalmente el ultimo) y luego desplazarnos a una version funcional del proyecto e identificarla como funcional, a partir de ahi git movera la cabecera para solicitarnos identificar si dichos commits son funcionales o no.
+            </p>
+            <ul class="commands">
+                <li><strong>git bisect start</strong> inicia el analisis binario de commits</li>
+                <li><strong>git bisect bad</strong> indica que el commit actual contiene el problema</li>
+                <li><strong>git bisect good</strong> indica que el commit actual es completamente funcional</li>
+                <li><strong>git bisect reset</strong> finaliza con el analisis de confirmaciones</li>
+            </ul>
+        </article>
+    </section>
     <footer>
         <!-- Mapa de Contacto -->
         <div class="title-map">Mapa de Contacto</div>
