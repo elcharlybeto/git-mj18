@@ -13,3 +13,13 @@
             menuBtn.innerHTML = '&times;' : 
             menuBtn.innerHTML = '&equiv;'
     }
+// Mapa de Contacto
+    mapBtn.addEventListener('click', openMap )
+
+    function openMap(){
+        if( mapFrm.classList.toggle('active') ){
+            mapBtn.classList.replace('icon-max', 'icon-min')
+        } else {
+            mapBtn.classList.replace('icon-min', 'icon-max')
+        }
+    }
