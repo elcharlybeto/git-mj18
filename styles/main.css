@@ -116,7 +116,12 @@
             .icon-max::before{ content: '+' }
             .icon-min::before{ content: '-' }
         /* Tabla Colaboradores */
-
+            .colabs{
+                margin: .5rem auto;
+            }
+            .colabs :is(th, td){
+                padding: .5rem 1rem;
+            }
         /* Formulario de Contacto */
             .contacto{
                 display: grid;
